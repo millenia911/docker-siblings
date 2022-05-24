@@ -20,6 +20,8 @@ RUN apt-get update && apt-get install -y docker-ce docker-ce-cli \
     containerd.io docker-compose-plugin
 
 RUN apt-get update && apt-get install python3-pip -y
-RUN pip install mlflow
+RUN pip install mlflow \
+    azure-storage-blob azure-identity \
+    fastapi uvicorn python-dotenv
 
 CMD [ "bash" ]
