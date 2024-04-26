@@ -9,3 +9,8 @@ docker run -v /var/run/docker.sock:/var/run/docker.sock \
 ```
 
 To run children spawner, use privileged mode instead of mounting volume.
+
+
+```sh
+docker run --privileged -itd <docker-image-name>
+```
